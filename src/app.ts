@@ -20,9 +20,8 @@ function handleClick() {
         setLosers(document.querySelectorAll('.square'));
     } else {
         clickedSquare.classList.add('loser');
-        clickedSquare.removeEventListener('click', handleClick);
     }
-    console.log('You clicked on ', this);
+    clickedSquare.removeEventListener('click', handleClick);
 }
 function setLosers(squares: NodeList) {
     squares.forEach((s: HTMLDivElement) => {
